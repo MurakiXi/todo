@@ -1,0 +1,120 @@
+.todo__alert--success {
+    padding: 10px;
+    background: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.todo__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.todo__content {
+    width: 1230px;
+    padding: 60px 15px;
+    margin: 0 auto;
+}
+
+.create-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.create-form__item {
+    width: 70%;
+}
+
+.create-form__item-input {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.create-form__button {
+    width: 20%;
+}
+
+.create-form__button-submit {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+}
+
+.todo-table {
+    width: 70%;
+    margin: 60px auto;
+}
+
+.todo-table__inner {
+    width: 100%;
+}
+
+.todo-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-table__header {
+    width: 20%;
+    text-align: left;
+}
+
+.todo-table__item {
+    width: 90%;
+    line-height: 50px;
+}
+
+.update-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-form__item {
+    width: 80%;
+}
+
+.update-form__item-input {
+    width: 100%;
+    border: none;
+}
+
+.update-form__button {
+    width: 50px;
+}
+
+.update-form__button-submit {
+    width: 100%;
+    background: #0000ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.delete-form__button {
+    width: 50px;
+}
+
+.delete-form__button-submit {
+    width: 100%;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+}

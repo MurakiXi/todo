@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.cscs')}}">
+<link rel="stylesheet" href="{{ asset('css/index.css')}}">
 @endsection
 
 @section('content')
@@ -18,7 +18,8 @@
         <div class="create-form__item">
             <input type="text" class="create-form__item-input" name="content">
         </div>
-            <button class="create-form__item-submit" type="submit">作成</button>
+        <div class="create-form__button">
+            <button class="create-form__button-submit" type="submit">作成</button>
         </div>
     </form>
         <div class="todo-table">
