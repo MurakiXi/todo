@@ -7,13 +7,24 @@
 @section('content')
 
 <div class="todo__alert">
+    @if(session('message'))
     <div class="todo__alert--success">
-        Todoを作成しました
+        {{ session('message')}}
     </div>
+    @endif
+    @if($errors->any())
+    <div class="todo__alert--danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error}}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 </div>
 
 <div class="todo__content">
-    <form action="" class="create-form">
+    <form action="/todos" class="create-form" method="post">
         @csrf
         <div class="create-form__item">
             <input type="text" class="create-form__item-input" name="content">
@@ -29,12 +40,13 @@
                         Todo
                     </th>
                 </tr>
+                @foreach($todos as $todo)
                 <tr class="todo-table__row">
                     <td class="todo-table__item">
                         <form action="" class="update-form">
                             @csrf
                             <div class="update-form__item">
-                                <input type="text" class="update-form__item-input" name="content">
+                                <input type="text" class="update-form__item-input" name="content">{{ $todo['content']}}
                             </div>
                             <div class="update-form__button">
                                 <button class="update-form__button-submit" type="submit">更新</button>
@@ -49,30 +61,7 @@
                         </form>
                     </td>
                 </tr>
-{{--  --}}
-                <tr class="todo-table__row">
-                    <td class="todo-table__item">
-                        <form action="" class="update-form">
-                            @csrf
-                            <div class="update-form__item">
-                                <input type="text" class="update-form__item-input" name="content">
-                            </div>
-                            <div class="update-form__button">
-                                <button class="update-form__button-submit" type="submit">更新</button>
-                            </div>
-                        </form>
-                    </td>
-                    <td class="todo-table__item">
-                        <form action="" class="delete-form">
-                            <div class="delete-form__button">
-                                <button class="delete-form__button-submit"type="submit">削除</button>
-                            </div>
-                        </form>
-                    </td>
-                </tr>
-
-
-{{--  --}}
+                @endforeach
             </table>
         </div>
 </div>
